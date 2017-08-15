@@ -1,0 +1,23 @@
+body {
+  background-image: url("http://media02.hongkiat.com/cartoonic-wallpapers/lights.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+}
+
+.p1 {
+  width: 100px;
+}
+
+.p2 {
+  width: 100px;
+}
+
+.p2 img {
+  width: 100px;
+}
+
+.p1 img {
+  height : 50px;
+}
