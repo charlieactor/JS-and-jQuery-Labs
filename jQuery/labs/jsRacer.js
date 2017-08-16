@@ -16,7 +16,7 @@ $(document).keypress(function(e) {
     }
     bool = moveCar(p1, e);
     if (bool) {
-      alert("Player one won! Play again dammit!");
+      alert("BB-8 won! Play again dammit!");
       p1.css('margin-left', '0px');
       p2.css('margin-left', '0px');
     }
@@ -28,7 +28,7 @@ $(document).keypress(function(e) {
     }
     bool = moveCar(p2, e);
     if (bool) {
-      alert("Player two won! Play again dammit!");
+      alert("BMO won! Play again dammit!");
       p1.css('margin-left', '0px');
       p2.css('margin-left', '0px');
     }
