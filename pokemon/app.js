@@ -22,9 +22,11 @@ function main() {
         td2.text(value.name);
         var img = "<img src='" + value.img + "'/>";
         td3.append(img);
+        var deleteButton = $("<button>").attr("id", value.pokeId).text("DELETE THIS POKEMAN");
         rows.append(td1);
         rows.append(td2);
         rows.append(td3);
+        rows.append(deleteButton);
         $('#pokeBod').append(rows);
 
         // CLICK EVENT
@@ -71,6 +73,16 @@ function main() {
               $('body').append(div);
             });
         });
+        deleteButton.click(function(e) {
+          e.preventDefault();
+          $.ajax({
+              type: "DELETE",
+              url: "http://52.25.225.137:8080/pokemon/data/poke/" + e.target.id
+            }).done(function() {
+              $('#pokeBod').empty();
+              main();
+            })
+        })
       })
 
     })
