@@ -63,7 +63,6 @@ function main() {
 
               var button = $('<button>').text("Click me to go back!")
               button.click(function(e) {
-                console.log(e);
                 div.empty();
                 $('#pokemon').show();
               });
