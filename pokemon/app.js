@@ -43,13 +43,20 @@ function main() {
               div.append(img);
               var header = $('<h3>').text("PokeID: " + disPokemon.pokeId);
               var namer = $('<h3>').text(disPokemon.name);
-              var species = $('<h4>').text("Species: " + disPokemon.species);
+              var attacks = $('<h3>').text("Types")
+              var types = $('<ul>');
+              disPokemon.types.forEach(function (val) {
+                  var li = $('<li>');
+                  li.text(val.name);
+                  types.append(li);
+              });
               var height = $('<h4>').text("Height: " + disPokemon.height);
               var weight = $('<h4>').text("Weight: " + disPokemon.weight);
               var desc = $('<p>').text(disPokemon.description);
               div.append(header);
               div.append(namer);
-              div.append(species);
+              div.append(attacks);
+              div.append(types);
               div.append(height);
               div.append(weight);
               div.append(desc);
